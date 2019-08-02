@@ -28,8 +28,11 @@ public class TestBase
 	public static WebDriver driver;
 	static WebDriverWait wait;	
 	static Properties prop;
-
+	
+	Properties pageObjects;
+	
 	//Reading the properties file 
+	
 	public TestBase()
 	{
 		prop = new Properties();
@@ -44,7 +47,40 @@ public class TestBase
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
+	
+//	public TestBase(String path)
+//	{
+//		prop = new Properties();
+//		FileInputStream fis;
+//		try
+//		{
+//			fis = new FileInputStream("C:\\Users\\swapnil\\eclipse-workspace\\IRCTC\\src\\main\\java\\com\\qa\\irctc\\config\\config.properties");
+//			prop.load(fis);
+//		}catch (FileNotFoundException e) 
+//		{
+//			e.printStackTrace();
+//		}catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		
+//		pageObjects = new Properties();
+//		
+//		FileInputStream ip;
+//		pageObjects = new Properties();
+//		try {
+//			ip = new FileInputStream(path);
+//			pageObjects.load(ip);
+//		}catch(FileNotFoundException e)
+//		{
+//			e.printStackTrace();
+//		}catch(IOException e)
+//		{
+//			e.printStackTrace();
+//		}
+//	}
 
 	//Common initialization method
 
